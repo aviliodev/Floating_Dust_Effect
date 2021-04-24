@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="hoja_estilo.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>    
+
+
+  <div class="slider-box">
+      <input id="slider" type="range" min="1" max="199" step="1"/>
+      <div id="range">1000px / 10.0s</div>
+  </div>
+
+  <ul id="scene" data-friction-x="0.03" data-friction-y="0.05">
+    <li class="layer" id="specks" data-depth="0.1"></li>
+    <li class="layer" id="layer-1" data-depth="0.15">
+      <div class="img" id="img-1"></div>
+    </li>
+    <li class="layer" id="layer-2" data-depth="0.25">
+      <div class="img" id="img-2"></div>
+    </li>
+    <li class="layer" id="layer-3" data-depth="0.45">
+      <div class="img" id="img-3"></div>
+    </li>
+  </ul>
+  <!-- Nota: la referencia a la libreria parallax.js se debe poner (al menos en este caso) abajo del contenido
+  del body, ya que si los objetos que usan el parallax, en el javascript "efecto.js" (las lista ul , li etc) 
+  un no estan creados, entonces el parallax va a tronar. -->
+
+  <!-- Nota2: para que parallax funcione, además, se debe tener instalado Node.js. En este caso se instaló
+  parallax con npm segun lo indica la documentación de parallax, y al hacerlo se instaló la carpeta
+  node_modules automaticamente. -->
+  <script src="node_modules/parallax-js/dist/parallax.min.js"></script>
+  <script src="efecto.js"></script>  
+          
+</body>
+</html>
